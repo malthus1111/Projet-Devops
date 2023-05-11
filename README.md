@@ -30,7 +30,7 @@ The API should now be running on `http://localhost:3000`.
 
 You can test the API using [Postman](https://www.postman.com/) by making HTTP requests to the available endpoints.
 
-Import zOO.postman_collection.json file into your postman workspace and acces to all available enpoints.
+Import z00.postman_collection.json file into your postman workspace and acces to all available enpoints.
 
 ## 📝 License
 
