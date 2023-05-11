@@ -31,6 +31,8 @@ router.get("/:id", async (req, res) => {
     }
 });
 
+
+
 router.get("/", async (req, res) => {
     try {
         const spaces = await spaceController.getAllSpaces();
