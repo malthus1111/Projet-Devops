@@ -11,8 +11,10 @@ export class SpaceController {
     }
 
     // Read
-    async getSpace(id: string): Promise<SpaceDocument | null> {
-        return await SpaceModel.findById(id).exec();
+    async getSpace(id: string) {
+        // Use populate to get the full Animal documents instead of just their IDs
+        const space = await SpaceModel.findById(id).populate('animals');
+        return space;
     }
 
     async getAllSpaces(): Promise<SpaceDocument[]> {

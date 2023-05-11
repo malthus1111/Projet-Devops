@@ -1,5 +1,3 @@
-// src/models/space.ts
-
 import mongoose from "mongoose";
 
 export interface SpaceData {
@@ -25,7 +23,7 @@ const spaceSchema = new mongoose.Schema({
     capacity: { type: Number, required: true },
     duration: { type: Number, required: true },
     openingHours: { type: String, required: true },
-    disabledAccess: { type: Boolean, required: true },
+    disabledAccess: { type: Boolean, required: false },
     maintenance: { type: Boolean, default: false },
 
 });

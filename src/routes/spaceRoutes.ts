@@ -61,7 +61,7 @@ router.delete("/:id", async (req, res) => {
     try {
         const success = await spaceController.deleteSpace(req.params.id);
         if (success) {
-            res.status(204).end();
+            res.status(204).json({message: "Space successfully deleted"});
         } else {
             res.status(404).json({ message: "Space not found" });
         }
