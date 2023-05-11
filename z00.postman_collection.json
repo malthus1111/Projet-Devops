@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "a55d47af-9678-4132-a3fd-071641f06337",
+		"name": "z00",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19666619"
+	},
+	"item": [
+		{
+			"name": "spaces CRUD",
+			"item": [
+				{
+					"name": "get all spaces",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/spaces/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"spaces",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add a space",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Arctic Tundra\",\n  \"description\": \"Explore the cold, desolate landscapes and unique wildlife of the Arctic tundra.\",\n  \"images\": [\n    \"https://example.com/arctic_tundra/image1.jpg\",\n    \"https://example.com/arctic_tundra/image2.jpg\"\n  ],\n  \"type\": \"Indoor\",\n  \"capacity\": 30,\n  \"duration\": 60,\n  \"openingHours\": \"10:00-16:00\",\n  \"accessibility\": true,\n  \"disabledAccess\": true\n\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/spaces/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"spaces",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete space",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/spaces/645b53c1f676ab64c4f38eaf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"spaces",
+								"645b53c1f676ab64c4f38eaf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "animals CRUD",
+			"item": [
+				{
+					"name": "add animal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Pingu\",\n    \"species\": \"Emperor Penguin\",\n    \"description\": \"A majestic emperor penguin from the icy lands of Antarctica.\",\n    \"image\": \"https://example.com/images/pingu.jpg\",\n    \"treatments\": [\n        {\n            \"date\": \"2023-06-15\",\n            \"treatment\": \"Vaccination\",\n            \"veterinarian\": \"Dr. Jane Doe\"\n        },\n        {\n            \"date\": \"2023-08-20\",\n            \"treatment\": \"Check-up\",\n            \"veterinarian\": \"Dr. John Doe\"\n        }\n    ],\n    \"space\": \"645ca8f23ba2475504b8128f\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/animals",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"animals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get animals by space",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/animals/space/645ca8f23ba2475504b8128f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"animals",
+								"space",
+								"645ca8f23ba2475504b8128f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/animals/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"animals",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/animals/645ca4da3ba2475504b81287",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"animals",
+								"645ca4da3ba2475504b81287"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modify animal by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"treatmentRecords\": [\n        {\n            \"date\": \"2023-05-12\",\n            \"treatment\": \"Applied antibiotic ointment to minor wound\",\n            \"veterinarian\": \"Dr. John Doe\"\n        }\n    ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/animals/645caffaaeb337a9539b0275",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"animals",
+								"645caffaaeb337a9539b0275"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get animals by id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
