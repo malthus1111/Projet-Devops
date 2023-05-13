@@ -22,6 +22,7 @@ export class AnimalController {
     async getAllAnimals(): Promise<AnimalData[]> {
         return await AnimalModel.find();
     }
+    
 
     async getAnimalsBySpace(spaceId: string): Promise<AnimalData[]> {
         return await AnimalModel.find({ space: spaceId });

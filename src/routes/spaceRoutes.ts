@@ -3,6 +3,8 @@
 import * as express from 'express';
 import {Express, Request} from "express";
 import { SpaceController } from "../controllers/spaceController";
+import * as path from "path";
+import { authorizeRoles } from '../middleware/auth';
 
 const router = express.Router();
 const spaceController = new SpaceController();
