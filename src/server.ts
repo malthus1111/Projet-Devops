@@ -1,5 +1,6 @@
 // src/server.ts
 
+
 import app from "./app";
 import { connectToDatabase } from "./config/database";
 

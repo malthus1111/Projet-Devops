@@ -28,3 +28,4 @@ userSchema.pre('save', async function(next) {
 });
 
 const UserModel = mongoose.model<UserDocument>('User', userSchema);
+export { UserModel, UserDocument };
