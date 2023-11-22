@@ -27,4 +27,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/devopstp:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/ZOO_API:latest
