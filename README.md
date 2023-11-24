@@ -15,4 +15,3 @@
 - Pour une release, créez une branche 'release/' à partir de 'develop'.
 - Après les tests et ajustements, fusionnez 'release/' dans main et 'develop'.
 - En cas de correctifs urgents, créez une branche 'hotfix/' à partir de 'main', puis fusionnez-la dans 'main' et 'develop' après correction.
-![image](https://github.com/malthus1111/Projet-Devops/assets/75313805/1996f8c6-1e92-4118-ae38-6f44f3fc8df0)
