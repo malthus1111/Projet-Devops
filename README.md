@@ -1,40 +1,17 @@
-# 🦁 Zoo Management API 🐵
+# Projet-Devops
 
-This API, built with Node.js, Express, MongoDB, and TypeScript, allows for efficient management of a zoo, including spaces, animals, and employees. 
+# Branches Principales:
+'main': Branche stable, contient le code en production.
+'develop': Branche de développement, contient les fonctionnalités en cours.
 
-## 🚀 Getting Started
+# Branches de Support:
+'feature/': Pour les nouvelles fonctionnalités. Par exemple, 'feature/nouvelle-fonction'.
+'hotfix/': Pour les correctifs urgents directement sur la branche main.
+'release/': Pour les préparations de la prochaine version en production.
 
-These instructions will guide you to get a copy of this project up and running on your local machine for development and testing purposes.
-
-### 📋 Prerequisites
-
-Before you begin, make sure you have installed:
-
-- Node.js and npm: You can download them [here](https://nodejs.org/).
-- MongoDB: Follow the installation instructions [here](https://docs.mongodb.com/manual/installation/).
-
-### 💾 Installation
-
-1. Clone the repository: https://github.com/ESPEDUZA/Z00-API.git
-
-2. Change to the project directory: cd Z00-API
-
-3. Install the required dependencies: npm install
-
-4. Start the development server: npm run start:dev
-
-
-The API should now be running on `http://localhost:3000`.
-
-## 🧪 Testing the API
-
-You can test the API using [Postman](https://www.postman.com/) by making HTTP requests to the available endpoints.
-
-Import z00.postman_collection.json file into your postman workspace and acces to all available enpoints.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-
-
+# Flux de Travail:
+- Développement de nouvelles fonctionnalités sur des branches 'feature/' créées à partir de 'develop'.
+- Une fois la fonctionnalité terminée, fusionnez la branche 'feature/' dans 'develop'.
+- Pour une release, créez une branche 'release/' à partir de 'develop'.
+- Après les tests et ajustements, fusionnez 'release/' dans main et 'develop'.
+- En cas de correctifs urgents, créez une branche 'hotfix/' à partir de 'main', puis fusionnez-la dans 'main' et 'develop' après correction.
